@@ -52,7 +52,7 @@ form.addEventListener('submit', (e) => {
     }
 
     if (isValid) {
-        successMessage.textContent = 'Succès! Le formulaire a été soumis avec succès.';
+        successMessage.textContent = 'Le formulaire a été soumis avec succès !!!!';
         form.style.display = 'none';
         successMessage.style.color = 'green';
     }
