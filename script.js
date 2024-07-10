@@ -13,7 +13,7 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     let isValid = true;
-
+ 
     // validation prenom
     if (prenomInput.value.length < 3 || prenomInput.value.length > 15) {
         prenomError.textContent = 'Le prénom doit avoir entre 3 et 15 caractères';
