@@ -33,8 +33,8 @@ form.addEventListener('submit', (e) => {
     }
 
     // validation email
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (!emailRegex.test(emailInput.value)) {
+    const emailVerif = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailVerif.test(emailInput.value)) {
         emailError.textContent = 'L\'adresse email est invalide';
         emailError.style.color = 'red';
         isValid = false;
