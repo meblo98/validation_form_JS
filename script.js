@@ -14,34 +14,38 @@ form.addEventListener('submit', (e) => {
 
     let isValid = true;
 
-    // Validate prenom
+    // validation prenom
     if (prenomInput.value.length < 3 || prenomInput.value.length > 15) {
         prenomError.textContent = 'Le prénom doit avoir entre 3 et 15 caractères';
+        prenomError.style.color = 'red';
         isValid = false;
     } else {
         prenomError.textContent = '';
     }
 
-    // Validate nom
+    // validation nom
     if (nomInput.value.length < 3 || nomInput.value.length > 15) {
         nomError.textContent = 'Le nom doit avoir entre 3 et 15 caractères';
+        nomError.style.color = 'red';
         isValid = false;
     } else {
         nomError.textContent = '';
     }
 
-    // Validate email
+    // validation email
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!emailRegex.test(emailInput.value)) {
         emailError.textContent = 'L\'adresse email est invalide';
+        emailError.style.color = 'red';
         isValid = false;
     } else {
         emailError.textContent = '';
     }
 
-    // Validate password
+    // validation password
     if (passwordInput.value.length < 8) {
         passwordError.textContent = 'Le mot de passe doit avoir au moins 8 caractères';
+        passwordError.style.color = 'red';
         isValid = false;
     } else {
         passwordError.textContent = '';
@@ -50,5 +54,6 @@ form.addEventListener('submit', (e) => {
     if (isValid) {
         successMessage.textContent = 'Succès! Le formulaire a été soumis avec succès.';
         form.style.display = 'none';
+        successMessage.style.color = 'green';
     }
 });
