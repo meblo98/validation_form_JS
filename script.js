@@ -55,5 +55,6 @@ form.addEventListener('submit', (e) => {
         successMessage.textContent = 'Le formulaire a été soumis avec succès !!!!';
         form.style.display = 'none';
         successMessage.style.color = 'green';
+        successMessage.style.backgroundColor = 'white';
     }
 });
