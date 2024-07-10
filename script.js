@@ -8,7 +8,7 @@ const nomError = document.getElementById('nomError');
 const emailError = document.getElementById('emailError');
 const passwordError = document.getElementById('passwordError');
 const successMessage = document.getElementById('successMessage');
-const doneIcon = document.createElement('i');
+const doneIcon = document.createElement('div');
 
 
 form.addEventListener('submit', (e) => {
@@ -54,11 +54,18 @@ form.addEventListener('submit', (e) => {
     }
 
     if (isValid) {
-        successMessage.textContent = 'Le formulaire a été soumis avec succès !!!! ';
-        form.style.display = 'none';
-        successMessage.style.color = 'green';
-        successMessage.style.backgroundColor = 'white';
-        doneIcon.className = 'fas fa-check-circle';
-        successMessage.appendChild(doneIcon);
+        // successMessage.textContent = 'Le formulaire a été soumis avec succès !!!! ';
+        // form.style.display = 'none';
+        // successMessage.style.color = 'green';
+        // successMessage.style.backgroundColor = 'white';
+        let textContent = Swal.fire({
+            position: "top-center",
+            icon: "success",
+            title: "Le formulaire a été soumis avec succès !!!!",
+            showConfirmButton: false,
+            timer: 15000
+          });
+        ;
+        // successMessage.appendChild(textContent);
     }
 });
