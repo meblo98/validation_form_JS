@@ -8,6 +8,8 @@ const nomError = document.getElementById('nomError');
 const emailError = document.getElementById('emailError');
 const passwordError = document.getElementById('passwordError');
 const successMessage = document.getElementById('successMessage');
+const doneIcon = document.createElement('i');
+
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -52,9 +54,11 @@ form.addEventListener('submit', (e) => {
     }
 
     if (isValid) {
-        successMessage.textContent = 'Le formulaire a été soumis avec succès !!!!';
+        successMessage.textContent = 'Le formulaire a été soumis avec succès !!!! ';
         form.style.display = 'none';
         successMessage.style.color = 'green';
         successMessage.style.backgroundColor = 'white';
+        doneIcon.className = 'fas fa-check-circle';
+        successMessage.appendChild(doneIcon);
     }
 });
